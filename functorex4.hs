@@ -6,6 +6,7 @@ data Three a b c = Three a b c deriving (Eq,Show)
 instance Functor (Three a b) where 
     fmap f (Three a b c) = Three a b (f c)
 
+data Berkay a = Berkay a deriving (Eq,Show)
 instance (Arbitrary c, Arbitrary b, Arbitrary a ) => Arbitrary (Three a b c) where
   arbitrary = do 
   a <- arbitrary
