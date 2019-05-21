@@ -3,6 +3,8 @@ import Test.QuickCheck.Function
 
 newtype Identity a = Identity a deriving (Show,Eq) 
 
+data Baranni a = Baranni a deriving(Eq,Show)
+
 instance Functor Identity where 
     fmap  f (Identity a) = Identity (f a)  
 
