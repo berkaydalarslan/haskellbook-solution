@@ -12,6 +12,8 @@ instance (Num a,Num b) => Num (Sum a b) where
     First a + First b = First (a+b)
     
 
+data Berkay a = Berkay a deriving (Eq,Show)
+
 instance Functor (Three' a) where  
     fmap f (Three' a b b') = Three' a (f b) (f b')
 
