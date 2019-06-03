@@ -21,3 +21,6 @@ instance Monad Identity where
     return = pure 
     (Identity a) >>= k = k a
 
+
+j :: Monad m => m (m a) -> m a
+j x = join $ x
